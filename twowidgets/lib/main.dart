@@ -60,6 +60,11 @@ class MyStatelessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        margin: const EdgeInsets.symmetric(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        elevation: 5,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -73,7 +78,11 @@ class MyStatelessWidget extends StatelessWidget {
               child: ButtonBar(
                 children: <Widget>[
                   FlatButton(
+                    shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
                     child: const Text('VIEW'),
+                    color: Colors.black,
                     onPressed: launchURL,
                   ),
                 ],
@@ -81,7 +90,7 @@ class MyStatelessWidget extends StatelessWidget {
             ),
           ],
         ),
-        color: Colors.grey,
+        color: Colors.white,
       ),
     );
   }
